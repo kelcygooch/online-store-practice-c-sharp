@@ -18,7 +18,7 @@ namespace ProductOrderApi.Services
         {
             return await _orderRepository.GetOrdersAsync();
         }
-        public async Task<Order> GetOrder(int id)
+        public async Task<Order?> GetOrder(int id)
         {
             return await _orderRepository.GetOrderAsync(id);
         }
@@ -26,7 +26,7 @@ namespace ProductOrderApi.Services
         {
             throw new NotImplementedException("Please implement CreateOrder method!");
         }
-        public async Task<Order> UpdateOrder(Order order)
+        public async Task<Order?> UpdateOrder(Order order)
         {
             return await _orderRepository.UpdateOrderAsync(order);
         }
