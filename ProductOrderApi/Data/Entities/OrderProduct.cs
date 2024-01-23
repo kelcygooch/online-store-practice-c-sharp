@@ -4,13 +4,13 @@ namespace ProductOrderApi.Data.Entities
 {
     public class OrderProduct
     {
-        public int Id { get; set; }
-        public int OrderId { get; set; }
-        public int ProductId { get; set; }
-        public int Quantity { get; set; }
-        public decimal Price { get; set; }
+        public int Id { get; set; } = 0;
+        public int OrderId { get; set; } = 0; 
+        public int ProductId { get; set; } = 0;
+        public int Quantity { get; set; } = 0; 
+        public decimal Price { get; set; } = 0;
         [JsonIgnore]
-        public Order Order { get; set; }
-        public Product Product { get; set; }
+        public Order Order { get; set; } = new Order();
+        public Product Product { get; set; } = new Product();
     }
 }

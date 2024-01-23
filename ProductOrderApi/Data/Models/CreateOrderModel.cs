@@ -2,6 +2,6 @@
 {
     public class CreateOrderModel
     {
-        public List<OrderProductModel> OrderProducts { get; set; }
+        public List<OrderProductModel> OrderProducts { get; set; } = new List<OrderProductModel>();
     }
 }

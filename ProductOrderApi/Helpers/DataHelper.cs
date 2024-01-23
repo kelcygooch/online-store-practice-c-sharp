@@ -70,11 +70,11 @@ namespace ProductOrderApi.Helpers
                 .ToList();
             return products;
         }
-        public Order GetOrder()
+        public Order? GetOrder()
         {
             return _orderContext.Orders.OrderBy(p => Guid.NewGuid()).FirstOrDefault();
         }
-        public Product GetProduct()
+        public Product? GetProduct()
         {
             return _orderContext.Products.OrderBy(p => Guid.NewGuid()).FirstOrDefault();
         }

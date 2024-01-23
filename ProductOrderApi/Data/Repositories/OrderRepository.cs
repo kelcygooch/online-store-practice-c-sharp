@@ -10,7 +10,7 @@ namespace ProductOrderApi.Data.Repositories
         {
             _context = context;
         }
-        public async Task<Order> GetOrderAsync(int id)
+        public async Task<Order?> GetOrderAsync(int id)
         {
             return await _context.Orders
                 .Include(o => o.OrderProducts)
@@ -30,7 +30,7 @@ namespace ProductOrderApi.Data.Repositories
             await _context.SaveChangesAsync();
             return order;
         }
-        public async Task<Order> UpdateOrderAsync(Order order)
+        public async Task<Order?> UpdateOrderAsync(Order order)
         {
             if (!await _context.Orders.AnyAsync(p => p.Id == order.Id))
             {
