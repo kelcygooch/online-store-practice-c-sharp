@@ -36,7 +36,7 @@ namespace ProductOrderApi.Helpers
                 var order = new Order
                 {
                     OrderDate = DateTime.Now,
-                    OrderProducts = new List<OrderProduct>()
+                    OrderProducts = new List<OrderProduct?>()
                 };
                 orders.Add(order);
             }

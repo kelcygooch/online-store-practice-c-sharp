@@ -10,9 +10,12 @@ Todo List
 - [ ] Product API
     - [ ] Create API Contract 
     - [ ] Implement API
+    - [ ] Create Unit Tests
 - [ ] Orders API
     - [ ] Create API Contract
     - [ ] Implement API
+    - [ ] Create Unit Tests
 - [ ] Database
     - [ ] Research DB to Hook Up
     - [ ] Implement DB 
+    - [ ] Create Unit Tests

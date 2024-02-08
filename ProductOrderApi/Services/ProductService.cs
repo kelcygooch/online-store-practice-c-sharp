@@ -14,7 +14,7 @@ namespace ProductOrderApi.Services
         {
             return await _productRepository.GetProducts();
         }
-        public async Task<Product> GetProduct(int id)
+        public async Task<Product?> GetProduct(int id)
         {
             return await _productRepository.GetProduct(id);
         }
@@ -26,7 +26,7 @@ namespace ProductOrderApi.Services
         {
             return await _productRepository.AddProduct(product);
         }
-        public async Task<Product> UpdateProduct(Product product)
+        public async Task<Product?> UpdateProduct(Product product)
         {
             return await _productRepository.UpdateProduct(product);
         }

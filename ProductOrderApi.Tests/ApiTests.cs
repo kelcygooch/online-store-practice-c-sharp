@@ -4,12 +4,9 @@ using Newtonsoft.Json;
 using ProductOrderApi.Data.Entities;
 using ProductOrderApi.Data.Models;
 using ProductOrderApi.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ProductOrderApi.Tests
 {
@@ -38,11 +35,7 @@ namespace ProductOrderApi.Tests
         [Fact]
         public async Task GetProduct_ReturnsOk()
         {
-            var product = _helper.GetProduct();
-            if (product == null)
-            {
-                throw new Exception("No product found");
-            }
+            var product = _helper.GetProduct() ?? throw new Exception("No product found");
             var response = await _client.GetAsync($"/api/products/{product.Id}");
             response.EnsureSuccessStatusCode();
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
